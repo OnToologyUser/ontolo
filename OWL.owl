@@ -1,0 +1,915 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons">
+    <Prefix name="" IRI="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="Writer" IRI="https://dbpedia.org/page/Writer#"/>
+    <Prefix name="GoT-Seasons" IRI="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Autor: Daniel Afonso Hernández</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Assassin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AverageDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AverageViewership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Baratheon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bolton"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Character"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Duration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Episode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EpisodeCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FamilyMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HighDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HighViewership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lannister"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LowDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LowViewership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Season"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stark"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Targaryen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tully"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tyrell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Viewership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Writer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#appears"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasKilled"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasViewership"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#howManyHasKilled"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#howManyWriters"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Season_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Winter_Is_Comming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#s1-ep1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#s1_ep1_duration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#s1_ep1_viewership"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Writer:Arya_Stark"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Writer:Meryn_Trant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Writer:Petyr_Baelish"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="Writer:test"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Assassin"/>
+        <Class IRI="#Character"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AverageDuration"/>
+        <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AverageViewership"/>
+        <Class IRI="#Viewership"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Baratheon"/>
+        <Class IRI="#FamilyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bolton"/>
+        <Class IRI="#FamilyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Duration"/>
+        <Class IRI="#EpisodeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Episode"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSome"/>
+            <Class IRI="#Duration"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamilyMember"/>
+        <Class IRI="#Character"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HighDuration"/>
+        <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HighViewership"/>
+        <Class IRI="#Viewership"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lannister"/>
+        <Class IRI="#FamilyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LowDuration"/>
+        <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LowViewership"/>
+        <Class IRI="#Viewership"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Season"/>
+        <Class IRI="#EpisodeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stark"/>
+        <Class IRI="#FamilyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Targaryen"/>
+        <Class IRI="#FamilyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Title"/>
+        <Class IRI="#EpisodeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tully"/>
+        <Class IRI="#FamilyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrell"/>
+        <Class IRI="#FamilyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Viewership"/>
+        <Class IRI="#EpisodeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writer"/>
+        <Class IRI="#EpisodeCharacteristic"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AverageDuration"/>
+        <Class IRI="#HighDuration"/>
+        <Class IRI="#LowDuration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Baratheon"/>
+        <Class IRI="#Bolton"/>
+        <Class IRI="#Lannister"/>
+        <Class IRI="#Stark"/>
+        <Class IRI="#Targaryen"/>
+        <Class IRI="#Tully"/>
+        <Class IRI="#Tyrell"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Season"/>
+        <NamedIndividual IRI="#Season_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Title"/>
+        <NamedIndividual IRI="#Winter_Is_Comming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Episode"/>
+        <NamedIndividual IRI="#s1-ep1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AverageDuration"/>
+        <NamedIndividual IRI="#s1_ep1_duration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LowViewership"/>
+        <NamedIndividual IRI="#s1_ep1_viewership"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assassin"/>
+        <NamedIndividual abbreviatedIRI="Writer:Arya_Stark"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual abbreviatedIRI="Writer:Arya_Stark"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSome"/>
+        <NamedIndividual IRI="#s1-ep1"/>
+        <NamedIndividual IRI="#Season_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSome"/>
+        <NamedIndividual IRI="#s1-ep1"/>
+        <NamedIndividual IRI="#Winter_Is_Comming"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSome"/>
+        <NamedIndividual IRI="#s1-ep1"/>
+        <NamedIndividual IRI="#s1_ep1_viewership"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKilled"/>
+        <NamedIndividual abbreviatedIRI="Writer:Arya_Stark"/>
+        <NamedIndividual abbreviatedIRI="Writer:Meryn_Trant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKilled"/>
+        <NamedIndividual abbreviatedIRI="Writer:Arya_Stark"/>
+        <NamedIndividual abbreviatedIRI="Writer:Petyr_Baelish"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDuration"/>
+        <NamedIndividual IRI="#s1_ep1_duration"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">62</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasViewership"/>
+        <NamedIndividual IRI="#s1_ep1_viewership"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">2220000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#howManyHasKilled"/>
+        <NamedIndividual abbreviatedIRI="Writer:Arya_Stark"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appears"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#appears"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasKilled"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasSome"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#appears"/>
+        <Class IRI="#Episode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasKilled"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSome"/>
+        <Class IRI="#Episode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#appears"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasKilled"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSome"/>
+        <Class IRI="#EpisodeCharacteristic"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDuration"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasViewership"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#howManyHasKilled"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#howManyWriters"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#howManyHasKilled"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDuration"/>
+        <Class IRI="#Duration"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasViewership"/>
+        <Class IRI="#Viewership"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#howManyHasKilled"/>
+        <Class IRI="#Character"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#howManyWriters"/>
+        <Class IRI="#Episode"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDuration"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasViewership"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#howManyHasKilled"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#howManyWriters"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>AverageDuration</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDuration"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+            </BuiltInAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">71</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#AverageDuration"/>
+                <Variable IRI="#v"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HighDuration</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDuration"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#HighDuration"/>
+                <Variable IRI="#v"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>LowDuration</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDuration"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">51</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#LowDuration"/>
+                <Variable IRI="#v"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>AverageViewership</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasViewership"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2999999</Literal>
+            </BuiltInAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7000001</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#AverageViewership"/>
+                <Variable IRI="#v"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HighViewership</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasViewership"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7000000</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#HighViewership"/>
+                <Variable IRI="#v"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>LowViewership</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasViewership"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3000000</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#LowViewership"/>
+                <Variable IRI="#v"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>IsAssassin</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#howManyHasKilled"/>
+                <Variable IRI="#c"/>
+                <Variable IRI="#n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThan">
+                <Variable IRI="#n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Assassin"/>
+                <Variable IRI="#c"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Assassin</IRI>
+        <Literal>Personajes que son asesinos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Assassin</IRI>
+        <Literal>Assassin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AverageDuration</IRI>
+        <Literal>Tiene una duración media.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AverageDuration</IRI>
+        <Literal>AverageDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AverageViewership</IRI>
+        <Literal>Tiene una audencia en la media.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AverageViewership</IRI>
+        <Literal>AverageViewership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Baratheon</IRI>
+        <Literal>Casa Baratheon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Baratheon</IRI>
+        <Literal>Baratheon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Bolton</IRI>
+        <Literal>Casa Bolton</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bolton</IRI>
+        <Literal>Bolton</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Character</IRI>
+        <Literal>Personajes de la serie.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Character</IRI>
+        <Literal>Character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Character</IRI>
+        <IRI>http://dbpedia.org/resource/List_of_Game_of_Thrones_characters</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Duration</IRI>
+        <Literal>Duración de un episodio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Duration</IRI>
+        <Literal>Duration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Episode</IRI>
+        <Literal>Episodio de la serie.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Episode</IRI>
+        <Literal>Episode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Episode</IRI>
+        <IRI>https://dbpedia.org/ontology/episode</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EpisodeCharacteristic</IRI>
+        <Literal>Características de un episodio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EpisodeCharacteristic</IRI>
+        <Literal>EpisodeCharacteristic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FamilyMember</IRI>
+        <Literal>Familia a la que pertenece un personaje.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FamilyMember</IRI>
+        <Literal>FamilyMember</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HighDuration</IRI>
+        <Literal>Tiene una duración alta.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HighDuration</IRI>
+        <Literal>HighDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HighViewership</IRI>
+        <Literal>Tiene una audiencia alta.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HighViewership</IRI>
+        <Literal>HighViewership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lannister</IRI>
+        <Literal>Casa Lannister</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lannister</IRI>
+        <Literal>Lannister</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LowDuration</IRI>
+        <Literal>Tiene una duración baja.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LowDuration</IRI>
+        <Literal>LowDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LowViewership</IRI>
+        <Literal>Tiene una audiencia baja.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LowViewership</IRI>
+        <Literal>LowViewership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Season</IRI>
+        <Literal>Temporada a la que pertenece un episodio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Season</IRI>
+        <Literal>Season</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Stark</IRI>
+        <Literal>Casa Stark</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stark</IRI>
+        <Literal>Stark</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Targaryen</IRI>
+        <Literal>Casa Targaryen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Targaryen</IRI>
+        <Literal>Targaryen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Title</IRI>
+        <Literal>Titulo de un episodio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Title</IRI>
+        <Literal>Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tully</IRI>
+        <Literal>Casa Tully</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tully</IRI>
+        <Literal>Tully</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tyrell</IRI>
+        <Literal>Casa Tyrell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tyrell</IRI>
+        <Literal>Tyrell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Viewership</IRI>
+        <Literal>Audiencia de un episodio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Viewership</IRI>
+        <Literal>Viewership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Writer</IRI>
+        <Literal>Escritor que ha escrito un episodio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Writer</IRI>
+        <Literal>Writer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Writer</IRI>
+        <IRI>https://dbpedia.org/page/Writer</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#appears</IRI>
+        <Literal>appears</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDuration</IRI>
+        <Literal>hasDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasKilled</IRI>
+        <Literal>hasKilled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSome</IRI>
+        <Literal>hasSome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasViewership</IRI>
+        <Literal>hasViewership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#howManyHasKilled</IRI>
+        <Literal>howManyHasKilled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#howManyWriters</IRI>
+        <Literal>howManyWriters</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI="Writer:test"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
